@@ -1,0 +1,17 @@
+
+<select *ngIf='data' (change)='changeP($event)' >
+	<option *ngFor='let p of data' >
+		{{p.name}}
+	</option>
+</select>
+<select *ngIf='data' (change)='changeC($event)' >
+	<option *ngFor='let c of data[proindex].city'>
+		{{c.name}}
+	</option>
+</select>
+<select *ngIf='data' (change)='changeA($event)' >
+	<option *ngFor='let a of data[proindex].city[citiesindex].areas'>
+		{{a}}
+	</option>
+</select>
+<p  *ngIf='data'>{{data[proindex].name}}--{{data[proindex].city[citiesindex].name}}--{{data[proindex].city[citiesindex].areas[areaindex]}}</p>

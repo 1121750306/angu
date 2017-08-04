@@ -1,0 +1,7 @@
+<div *ngIf = 'selectedHero'>
+	<h2>{{selectedHero.name}} details</h2>
+	<p>id = {{selectedHero.id}}</p>
+	<input type="text" value="{{selectedHero.name}}"/>
+	<a [routerLink]="['../heroedit',selectedHero.id]" routerLinkActive='active'>edit hero</a>
+</div>
+

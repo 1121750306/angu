@@ -1,0 +1,13 @@
+<div>
+	<table>
+		<tr *ngFor='let p of products'>
+			<td><input type="checkbox" value="{{p.id}}" [checked]='p.selected' (click)='changestate($event,p)'/></td>
+			<td>{{p.id}}</td>
+			<td><img width="100px" height="100px" src="assets/images/{{p.img}}"/></td>
+			<td>{{p.price}}</td>
+			<td><input type="button" value="-" (click)='des(p)'/><input type="text" [(ngModel)]='p.count'/><input (click)='add(p)' type="button" value="+"/></td>
+			<td>{{p.price*p.count}}</td>
+		</tr>
+	</table>
+	<p>总价:{{getsum()}}</p>
+</div>

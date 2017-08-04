@@ -1,0 +1,6 @@
+<div>
+	<input #myData type="text" (keyup)='sendData(myData.value)' />
+	<input #myphone type="text" (keyup)='getphoneinfo(myphone.value)' />
+	<p *ngIf='myphon'>{{myphon.catName}}</p>
+	<p *ngIf='myphon'>{{myphon.province}}</p>
+</div><!--模板变量-->

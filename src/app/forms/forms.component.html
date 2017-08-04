@@ -1,0 +1,18 @@
+<form novalidate [formGroup]="user" (ngSubmit)='onSubmit(user)'>
+	<label>
+		<span>full name</span>
+		<input type="text" placeholder="your full name" formControlName='name'/>
+	</label>
+	<div formGroupName='account'>
+		<label>
+		<span>email</span>
+		<input type="text" placeholder="your email" formControlName='email'/>
+	</label>
+	<label>
+		<span>confirm address</span>
+		<input type="text" placeholder="confirm your address" formControlName='confirm'/>
+	</label>
+	</div>
+	<button type="submit" [disabled]='user.invalid'>sign up</button>
+	
+</form>
